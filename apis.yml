@@ -1,23 +1,62 @@
 aid: aro-homes
+
 name: Aro Homes
-description: 'Aro Homes is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://wp-uphome.astroon.pro/wp-content/uploads/2020/02/todd-quackenbush-JJB_K8aCPU4-unsplash-2048x1343-1-2.jpg
+
+description: 'Aro Homes is a Mexican construction and remodeling company specializing in new builds, renovations, and detailed architectural projects. Their portfolio showcases residential and commercial works, emphasizing quality craftsmanship and client-focused design. The company provides services from project conception through completion, aiming to transform client visions into reality with integrated design and construction solutions.'
+
 url: https://raw.githubusercontent.com/api-evangelist/aro-homes/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Construction
+- Remodeling
+- Real Estate
+- Mexico
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/aro-homes-hosts.yml
+- type: Blog
+  url: https://arohomes.com/blog/
+- type: DomainSecurity
+  url: security/aro-homes-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://arohomes.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other contract found at standard endpoints on api.arohomes.com.
+  evidence:
+    - url: https://api.arohomes.com/openapi.json
+      status: 000
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
